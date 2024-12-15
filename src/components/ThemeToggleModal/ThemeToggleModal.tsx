@@ -1,22 +1,32 @@
 import Dialog from "@mui/material/Dialog";
 import "./ThemeToggleModal.css";
 import { useState } from "react";
+import { Action } from "./Pages/Action";
+import { Initial } from "./Pages/Initial";
 
 interface Props {
   open: boolean;
   handleClose: VoidFunction;
 }
 
+export enum Page {
+  Initial,
+  Action,
+}
+
 export const ThemeToggleModal = ({ open, handleClose }: Props) => {
   const [theme, setTheme] = useState("light");
+  const [page, setPage] = useState<Page>(Page.Initial);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     document.body.setAttribute("data-theme", newTheme);
-
-    // I also want to close the modal after changing the theme
     handleClose();
+    // adding this timeout as it was glitching the first modal briefly if not
+    setTimeout(() => {
+      setPage(Page.Initial);
+    }, 300);
   };
 
   return (
@@ -26,20 +36,16 @@ export const ThemeToggleModal = ({ open, handleClose }: Props) => {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <div className="modal-container">
-        <div className="modal-header">
-          <h3>Hello, I am a modal</h3>
-          <p>By clicking switch, you will toggle the mood</p>
-        </div>
-        <div className="modal-footer">
-          <button className="secondary-button" onClick={() => handleClose()}>
-            Secondary button
-          </button>
-          <button className="primary-button" onClick={() => toggleTheme()}>
-            Toggle
-          </button>
-        </div>
-      </div>
+      {
+        {
+          [Page.Initial]: (
+            <Initial setPage={setPage} handleClose={handleClose} />
+          ),
+          [Page.Action]: (
+            <Action handleClose={handleClose} toggleTheme={toggleTheme} />
+          ),
+        }[page]
+      }
     </Dialog>
   );
 };
