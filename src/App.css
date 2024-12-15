@@ -11,6 +11,65 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #F6F8F9;
+  border-bottom: 1px solid #f6f8f9;
 }
 
+.MuiSwitch-thumb {
+  color: #2337e0;
+}
+
+.Mui-checked + .MuiSwitch-track {
+  background-color: transparent !important;
+  border: 2px solid #2337e0;
+  padding: 8px;
+  margin-top: -10px;
+  margin-right: 28px;
+  border-radius: 20px;
+  min-width: 48px;
+}
+
+.MuiSwitch-root {
+  width: 70px !important;
+}
+
+.MuiSwitch-track {
+  background-color: transparent !important;
+  border: 2px solid #2337e0;
+  padding: 8px;
+  margin-top: -10px;
+  margin-left: -10px;
+  margin-right: 28px;
+  border-radius: 20px !important;
+  min-width: 48px;
+}
+
+.MuiSwitch-switchBase.Mui-checked {
+  transform: translateX(32px) !important;
+}
+
+.switch-container {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  align-items: center;
+}
+
+.theme-label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.welcome-heading {
+  padding: 24px 24px 0 24px;
+}
+
+.content-container {
+  width: 425px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 24px;
+  gap: 10px;
+}

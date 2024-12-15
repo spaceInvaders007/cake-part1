@@ -1,4 +1,16 @@
-# React + TypeScript + Vite
+- Process for developing the exercise: 
+
+1 - Create theme variables and add initial color values (will surely need tweaking later on)
+2 - Remove scaffolding code, import svg logo and place the header matching figma
+3 - Add material UI for using the modal functionality
+4 - Add Switch, headers, placeholder text and html styling
+
+
+
+
+
+
+<!-- # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -47,4 +59,4 @@ export default tseslint.config({
     ...react.configs['jsx-runtime'].rules,
   },
 })
-```
+``` -->
