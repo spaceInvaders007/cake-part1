@@ -8,7 +8,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --color: #213547;
+  --color: #000447;
   --background-color: #fff;
   --link-color: #646cff;
   --link-hover-color: #747bff;
@@ -29,6 +29,11 @@ a:hover {
   color: #535bf2;
 }
 
+p {
+  font-size: 12px;
+  margin: 0;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -41,6 +46,11 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+h3 { 
+  font-weight: 500;
+  margin: 0;
 }
 
 button {
@@ -74,4 +84,19 @@ button:focus-visible {
   --background-color: #ffffff;
   --link-hover-color: #747bff;
   --button-background: #f9f9f9;
+}
+
+.secondary-button {
+  padding: 8px 12px;
+  gap: 8px;
+  background-color: #F1EFFF;
+  border: none;
+}
+
+.primary-button {
+  padding: 8px 12px;
+  gap: 8px;
+  background-color: #2337E0;
+  color: #fff;
+  border: none;
 }
