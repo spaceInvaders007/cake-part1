@@ -73,3 +73,13 @@
   padding: 24px;
   gap: 10px;
 }
+
+.content-desc {
+  text-align: left;
+}
+
+.cake-logo {
+  background: #fff;
+  padding: 8px;
+  border-radius: 8px;
+}
