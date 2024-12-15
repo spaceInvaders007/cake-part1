@@ -1,9 +1,17 @@
+In order to run the app you should run: 
+
+1 - npm install
+2 - npm run dev
+
 - Process for developing the exercise: 
 
 1 - Create theme variables and add initial color values (will surely need tweaking later on)
 2 - Remove scaffolding code, import svg logo and place the header matching figma
 3 - Add material UI for using the modal functionality
 4 - Add Switch, headers, placeholder text and html styling
+5 - Add the modal, style the buttons and text
+6 - Make code structure improvements
+
 
 
 
