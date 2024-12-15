@@ -11,6 +11,10 @@ In order to run the app you should run:
 4 - Add Switch, headers, placeholder text and html styling
 5 - Add the modal, style the buttons and text
 6 - Make code structure improvements
+7 - Make the elements counter
+8 - Add an easter egg
+9 - Add different steps to modals
+
 
 
 
